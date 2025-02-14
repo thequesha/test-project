@@ -91,6 +91,52 @@ The project follows a repository pattern with clear separation of concerns:
 - **Repositories**: Data access layer with interfaces for better testability
 - **Models**: Eloquent models representing database entities
 
+## API Documentation
+
+The API is documented using Swagger/OpenAPI. You can access the interactive API documentation at:
+
+```
+http://your-app-url/api/documentation
+```
+
+To view the documentation locally:
+1. Start the development server: `php artisan serve`
+2. Visit: `http://localhost:8000/api/documentation`
+
+The Swagger UI provides:
+- Detailed endpoint descriptions
+- Request/response examples
+- Interactive API testing interface
+- Authentication requirements
+
+## Testing
+
+The project includes comprehensive testing suites:
+
+### Unit Tests
+```bash
+# Run unit tests
+php artisan test --testsuite=Unit
+```
+
+Unit tests cover:
+- Service layer business logic
+- Repository layer data access
+- Model relationship validations
+
+### Feature Tests
+```bash
+# Run feature tests
+php artisan test --testsuite=Feature
+```
+
+Feature tests cover:
+- API endpoints
+- Resource booking workflows
+- Authentication and authorization
+- Booking conflict prevention
+
+
 ## Contributing
 
 1. Fork the repository
@@ -98,4 +144,3 @@ The project follows a repository pattern with clear separation of concerns:
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
